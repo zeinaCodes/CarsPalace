@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Palace</title>
+    <!-- favicon logo -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon-16x16.png">
+    <link rel="manifest" href="/logo/site.webmanifest">
+    <!-- AOS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+    <!-- Dark Mode Switch -->
+    <div class="switch-holder">
+        <div class="switch-label">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="switch-toggle">
+            <input type="checkbox" id="mode">
+            <label for="mode"></label>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="logo-div">
+            <a href="#home" id="logo-anchor"><img src="/logo/logo.png" alt="logo" class="logo-png"
+                    id="logo-png"></a>
+        </div>
+        <div class="overlay" id="overlay">
+            <a href="#Wer" id="about">Wer sind wir</a>
+            <a href="#Antrag" id="contract">Lage</a>
+            <a href="#Kontakt" id="contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="home-container">
+            <img data-aos="fade-left" data-aos-delay="500" src="/images/car1.png" alt="car" id="home-img">
+            <h1 data-aos="flip-up" data-aos-delay="1500">Cars Palace</h1>
+        </div>
+    </section>
+
+    <!-- Wer sind wir -->
+    <section id="Wer">
+        <div class="about-container">
+            <div class="about">
+                <p class="about-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio animi maxime
+                    sint
+                    voluptate, ipsam aperiam architecto quisquam dicta exercitationem eius iste est dignissimos
+                    mollitia, itaque enim! Sequi architecto culpa obcaecati.</p>
+            </div>
+            <div class="about">
+                <img class="about-img" src="/images/right_wing.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Antrag -->
+    <section id="Antrag">
+
+    </section>
+
+    <!-- Kontakt -->
+    <section id="Kontakt">
+        <div class="contact-container">
+            <h4>Kontaktieren Sie Uns!</h4>
+            <form action="/carspalace" method="POST">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <label for="name">Vollname</label>
+                        <input type="text" id="name" name="userName" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="phone">Telefon</label required>
+                        <input type="text" id="phone" name="userPhone" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="brand">Auto Marke</label>
+                        <input type="text" id="brand" name="carBrand">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="kilometer">Kilometer</label>
+                        <input type="text" id="kilometer" name="carKilo">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="year">Baujahr</label>
+                        <input type="text" id="year" name="modelYear">
+                    </div>
+                    <div class="radio-wrapper">
+                        <label class="radio-label" for="benzine">
+                            <input type="radio" name="fuel" value="benzine" id="benzine">
+                            <div class="radio-btn"></div>Benzine
+                        </label>
+                        <label class="radio-label" for="diesel">
+                            <input type="radio" name="fuel" value="diesel" id="diesel">
+                            <div class="radio-btn"></div>Diesel
+                        </label>
+                        <label class="radio-label" for="elektro">
+                            <input type="radio" name="fuel" value="elektro" id="elektro">
+                            <div class="radio-btn"></div>Elektro
+                        </label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <label class="radio-label" for="Automat">
+                            <input type="radio" name="engineType" value="Automat" id="Automat">
+                            <div class="radio-btn"></div>Automat
+                        </label>
+                        <label class="radio-label" for="Manuel">
+                            <input type="radio" name="engineType" value="Manuel" id="Manuel">
+                            <div class="radio-btn"></div>Manuel
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="price">Circa Preis (chf)</label>
+                        <input type="text" id="price" name="price">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="description-wrapper">
+                        <label for="notes">Bezeichnung</label>
+                        <textarea name="description" id="notes" cols="30" rows="6"></textarea>
+                    </div>
+                    <!-- <div class="imgs-wrapper">
+                        <div class="img-UI">
+                            <label for="img-upload" id="upload">Upload Images</label>
+                            <input type="file" name="" id="img-upload" multiple accept="png, jpeg">
+                            <span id="filesNum">No Files Chosen</span>
+                        </div>
+                        <div class="alert hide" id="alert">
+                            <span class="fas fa-exclamation-circle"></span>
+                            <span class="msg">You can only select 6 files</span>
+                            <span class="fas fa-times" id="close-btn"></span>
+                        </div>
+                        <div id="thumbnails-container">
+                        </div>
+                    </div> -->
+                    <button id="wtsp">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <a href="#home"><button id="scrollUp">
+            <span id="arrow">
+            </span>
+        </button></a>
+
+    <footer class="footer bg-dark py-3 mt-auto">
+        <div class="icons-container">
+            <span>&copy; Cars Palace 2023</span>
+        </div>
+    </footer>
+
+    <!-- AOS js script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 1000, // values from 0 to 3000, with step 50ms
+            duration: 1500, // values from 0 to 3000, with step 50ms
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+        });
+    </script>
+    <!-- Dark Mode Script -->
+    <script src="/scripts/darkMode.js"></script>
+
+    <!-- Mobile Mode Navbar Script -->
+    <script src="/scripts/mobileMode.js"></script>
+
+    <!-- Image Upload Script -->
+    <script src="/scripts/imageUpload.js"></script>
+
+    <!-- Send whatsapp msg script -->
+    <!-- <script src="/scripts/whatsapp.js"></script> -->
+</body>
+
+</html>
